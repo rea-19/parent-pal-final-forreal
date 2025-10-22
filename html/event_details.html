@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Event Details -->
+    <section id="event-details"></section>
+
+    <!-- Write Review Button -->
+    <div class="write-review-section" style="text-align: center; margin: 20px 0;">
+      <button id="writeReviewBtn" class="action-button primary">
+        <i class="fa-solid fa-pen"></i> Write Review
+      </button>
+    </div>
+
+    <!-- Review Popup -->
+    <div id="reviewPopup" class="popup">
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <form id="reviewForm">
+          <label for="reviewerChoice">Post as:</label>
+          <select id="reviewerChoice">
+            <option value="anonymous">Anonymous</option>
+            <option value="named">Named</option>
+          </select>
+
+          <div id="nameField" style="display: none;">
+            <input type="text" id="reviewerName" placeholder="Enter your name">
+          </div>
+
+          <textarea id="reviewText" placeholder="Write your review..."></textarea>
+          <div class="button-group">
+            <button type="submit" class="save-btn">Submit</button>
+            <button type="button" class="cancel-btn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class ="reviews"> 
+        <!-- Javacript library used: Elfsight All-in-One Reviews | Untitled All-in-One Reviews: https://elfsight.com/html-widgets/ -->
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-b1ed0314-7e70-428f-b9d2-e9dcf252213a" data-elfsight-app-lazy></div>    
+    </div>
+
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="/js/header_footer.js"></script>
+    <script src="/js/rewards_logic.js"></script> <!-- global points system -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/js/event_details.js"></script>
+    <script src="/js/rewards_logic.js"></script>
+</body>
+</html>

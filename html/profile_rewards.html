@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <!-- The header is fetched -->
+    <div id="header"></div>
+
+
+    <!-- Membership card section -->
+    
+  <section class="card-section">
+    <div class="membership-card" id="membershipCard">
+      <div class="card-inner">
+        <div class="card-face card-front">
+            <img src="/src/rewards_card.png" alt="Membership Card Front">
+        </div>
+        <div class="card-face card-back">
+            <img src="/src/rewards_card2.png" alt="Membership Card Back">
+        </div>
+      </div>
+
+      <div class="card-buttons">
+        <button class="wallet-btn">Add to Apple Wallet</button>
+        <button class="flip-btn" onclick="flipCard()">Flip Card</button>
+      </div>
+    </div>
+  </section>
+
+
+
+<!-- Info banner cgpt used--> 
+<section class="info-banner">
+  <details>
+    <summary><strong>How to earn your rewards! ▾</strong></summary>
+    <p>
+      Below, you’ll see the option to select a goal. Find one that works best for you so that you can start gaining points now. 
+      Once you select your goal, the more events you attend, the more points you get. 
+      You can also gain points from leaving reviews on the events you have been to. 
+      Keep an eye on the progress bar to know when you have reached your goal!
+    </p>
+  </details>
+</section>
+
+  <!-- Rewards Section -->
+  <!-- link goals to progress bar -->
+<section class="rewards">
+  <h2><span class="black-text">Set Your</span> <span class="green-text">Goal</span></h2>
+</section>
+
+<div class="rewards-grid">
+
+  <div class="reward-card current">
+    <div class="reward-content">
+      <img src="/src/rewards_5.png" alt="5% Off Reward" class="reward-img">
+      <div class="reward-side current-side" onclick="setGoal(50)">CURRENT GOAL</div>
+    </div>
+    
+  </div>
+
+  <div class="reward-card">
+    <div class="reward-content">
+      <img src="/src/rewards_10.png" alt="10% Off Reward" class="reward-img">
+      <div class="reward-side" onclick="setGoal(100)">SET GOAL</div>
+    </div>
+    
+  </div>
+
+  <div class="reward-card">
+    <div class="reward-content">
+      <img src="/src/rewards_15.png" alt="15% Off Reward" class="reward-img">
+      <div class="reward-side" onclick="setGoal(150)">SET GOAL</div>
+    </div>
+  </div>
+
+  <div class="reward-card">
+    <div class="reward-content">
+      <img src="/src/rewards_20.png" alt="20% Off Reward" class="reward-img">
+      <div class="reward-side" onclick="setGoal(200)">SET GOAL</div>
+    </div>
+ 
+  </div>
+
+  <div class="reward-card">
+    <div class="reward-content">
+      <img src="/src/rewards_25.png" alt="25% Off Reward" class="reward-img">
+      <div class="reward-side" onclick="setGoal(250)">SET GOAL</div>
+    </div>
+
+  </div>
+
+  <div class="reward-card">
+    <div class="reward-content">
+      <img src="/src/rewards_30.png" alt="30% Off Reward" class="reward-img">
+      <div class="reward-side" onclick="setGoal(300)">SET GOAL</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<button onclick="addPoints(10)">+10 Points</button>
+<button onclick="setGoal(200)">Set Goal to 200</button>
+<button onclick="resetPoints()">Reset</button>
+
+    <div id="footer"></div>
+
+    <!-- Javascript -->
+    <script src="/js/header_footer.js"></script>
+    <script src="/js/rewards_logic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	  <script src="/js/tutorial_popup.js"></script>
+</body>
+</html>

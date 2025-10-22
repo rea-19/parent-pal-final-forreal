@@ -1,0 +1,80 @@
+<nav id="navbar">
+  <div id="navbar-logo">
+    <img src="/src/logo.png" alt="Logo">
+  </div>
+
+  <div id="navbar-links">
+    <a href="/index.html">Home</a>
+    <a href="/html/browse_events.html">Browse Events</a>
+
+    <div class="dropdown">
+      <a href="#" class="dropdown-toggle">Resources ▾</a>
+      <div class="dropdown-menu">
+        <a href="/html/resources_maps.html">Map</a>
+        <a href="/html/resources_guide.html">Guide</a>
+      </div>
+    </div>
+
+    <div class="drodown">
+      <a href="#" id="profileBtn">Profile</a>
+      <a href="#" id="logoutBtn" style="display:none;">Logout</a>
+    </div>
+    
+  </div>
+</nav>
+
+<!-- progress bar styling -->
+<style>
+  /* runner image sizing and vertical centering inside the progress bar */
+  #progress-bar { display: flex; align-items: center; gap: 8px; }
+  #progress-bar #runner { display: flex; align-items: center; }
+  .runner-img { width: 28px; height: auto; display: block; }
+</style>
+
+<div class="progress-container" id="not-signedin-progressbar">
+  <div id="progress-bar">
+    <div id="progress-fill"></div>
+    <span id="point-text">Sign in to redeem discounts</span>
+    <div id="runner"><img src="/src/runner.png" alt="Runner" class="runner-img"></div>
+  </div>
+</div>
+
+<div class="progress-container" id="signedin-progressbar" style="display:none;">
+  <div id="progress-bar">
+    <div id="progress-fill" class="progress-done"></div>
+    <span id="point-text">You’ve earned 120 points 🎉</span>
+    <div id="runner"><img src="/src/runner.png" alt="Runner" class="runner-img"></div>
+  </div>
+</div>
+
+<!-- pop up for sign in or login -->
+<div id="popupContainer">
+  <div class="auth-popup">
+    <span id="closePopup" class="close-btn">&times;</span>
+
+    <!-- login form -->
+    <form id="loginForm">
+      <h1>Welcome Back</h1>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <a href="#">Forgot password?</a>
+      <button type="submit">Sign In</button>
+      <p style="text-align:center;margin-top:15px;">Don’t have an account?
+        <a href="#" id="showSignup">Sign up</a>
+      </p>
+    </form>
+
+    <!-- sign up form -->
+    <form id="signupForm" style="display:none;">
+      <h1>Create Account</h1>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Phone Number" pattern="[0-9]{8,15}" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+      <p style="text-align:center;margin-top:15px;">Already have an account?
+        <a href="#" id="showLogin">Sign in</a>
+      </p>
+    </form>
+  </div>
+</div>
